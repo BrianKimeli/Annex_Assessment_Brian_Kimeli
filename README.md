@@ -29,3 +29,11 @@ This repository contains my solutions for the Annex Technologies Limited technic
     - *Secondary:* For articles with the same comment count, I applied an alphabetical sort in descending order (Z to A) on the article name.
 - *Scalability:* The logic is designed to handle API pagination by reading the `total_pages` field from the initial response and iterating accordingly to ensure a complete dataset is captured before sorting.
 - *Note:* In a production environment, I would implement this using a library like *libcurl* for HTTP requests and *nlohmann/json* for robust parsing. For this assessment, I focused on the core algorithmic logic and data transformation requirements.
+
+### About My Approach
+As a Software Engineer, I believe that great software isn't just about solving a problem, it's about building solutions that are efficient, readable, and ready for a team environment. 
+
+Whether I'm optimizing an algorithm for a $10^{15}$ input or refining a SQL query for deterministic results, my goal is to write code that my future colleagues would be happy to work with.
+
+**Why Annex Technologies:**
+I admire Annex’s focus on robust, scalable technology solutions within the Kenyan tech ecosystem. My objective is to contribute to a team that values high-performance logic and clean data architecture. I am particularly excited about the prospect of applying my background in software engineering to help Annex continue building secure and efficient services for the local market. I can't wait to be a part of the team and contribute to this vision.
