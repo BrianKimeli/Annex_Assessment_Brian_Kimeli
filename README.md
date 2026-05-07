@@ -5,8 +5,8 @@ This repository contains my solutions for the Annex Technologies Limited technic
 ## In Progress
 - [x] Repository Setup
 - [x] Question 1: Find the p-th Factor (C)
-- [ ] Question 2: Top Scoring Students (SQL)
-- [ ] Question 3: Top Articles API (C++)
+- [x] Question 2: Top Scoring Students (SQL)
+- [x] Question 3: Top Articles API (C++)
 
 **Author:** Brian Kimeli
 
@@ -22,3 +22,10 @@ This repository contains my solutions for the Annex Technologies Limited technic
 - *Sorting Precedence:* - The primary sort is on `SCORE` in descending order (highest scores first). 
     - The secondary sort is on `ID` in ascending order. This acts as a deterministic tie-breaker for students with identical scores (e.g., in the sample data, Dick and Jerry both scored 85.0, but Dick is prioritized because of his lower ID).
 - *Optimization:* Used the `LIMIT` clause to ensure only the top three records are processed and returned.
+
+### 3. Top Articles API (C++)
+- *Filtering Logic:* I implemented a fallback mechanism for article names. The program prioritizes the `title` field, but drops back to `story_title` if the primary title is missing. Entries missing both are discarded to maintain data quality.
+- *Sorting & Ranking:* - *Primary:* Sorted by `num_comments` in descending order (handling nulls as 0).
+    - *Secondary:* For articles with the same comment count, I applied an alphabetical sort in descending order (Z to A) on the article name.
+- *Scalability:* The logic is designed to handle API pagination by reading the `total_pages` field from the initial response and iterating accordingly to ensure a complete dataset is captured before sorting.
+- *Note:* In a production environment, I would implement this using a library like *libcurl* for HTTP requests and *nlohmann/json* for robust parsing. For this assessment, I focused on the core algorithmic logic and data transformation requirements.
